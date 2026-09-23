@@ -54,5 +54,5 @@ jobs:
           test -n "$COOLIFY_DEPLOY_WEBHOOK"
           test -n "$COOLIFY_TOKEN"
           curl --fail --show-error --silent --max-time 30 \
-            --request GET "$COOLIFY_DEPLOY_WEBHOOK" \
+            --request POST "$COOLIFY_DEPLOY_WEBHOOK" \
             --header "Authorization: Bearer $COOLIFY_TOKEN"
